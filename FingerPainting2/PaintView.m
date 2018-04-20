@@ -7,10 +7,14 @@
 //
 
 #import "PaintView.h"
-#import "LineSegment.h"
+#import "Line.h"
+
 
 @interface PaintView()
-@property (nonatomic, strong) NSMutableArray<LineSegment*>* line;
+//@property (nonatomic, strong) NSMutableArray<LineSegment*>* line;
+//@property (nonatomic, strong) NSMutableArray<LineSegment*>* passingLine;
+@property (nonatomic, strong) NSMutableArray<NSMutableArray*>* lines;
+@property (nonatomic, strong) UIColor* color;
 @end
 
 
@@ -28,6 +32,10 @@
     CGPoint first = [touch previousLocationInView:self];
     LineSegment *seg = [[LineSegment alloc] initWithFirstPoint:first andSecondPoint:first];
     [self.line addObject:seg];
+    Line *newLine = [Line new];
+    newLine.color = self.color;
+    [self.lines addObject:<#(nonnull NSMutableArray *)#>]
+    [newLine.line addObject:seg];
     NSLog(@"began");
     [self setNeedsDisplay];
 }
@@ -38,6 +46,7 @@
     CGPoint second = [touch locationInView:self];
     LineSegment *seg = [[LineSegment alloc] initWithFirstPoint:first andSecondPoint:second];
     [self.line addObject:seg];
+    
     NSLog(@"continuing");
     [self setNeedsDisplay];
 }

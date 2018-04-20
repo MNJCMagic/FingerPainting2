@@ -8,11 +8,11 @@
 
 #import "ViewController.h"
 #import "PaintView.h"
-#import "SelectView.h"
+
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet PaintView *PaintView;
-@property (weak, nonatomic) IBOutlet SelectView *SelectView;
+
 
 
 @end
@@ -30,5 +30,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)colorChanged:(UIButton *)sender {
+    
+}
 
 @end
