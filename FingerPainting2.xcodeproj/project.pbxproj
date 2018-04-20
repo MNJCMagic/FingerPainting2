@@ -13,6 +13,9 @@
 		271C6DB2208A5BD4009F79ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 271C6DB1208A5BD4009F79ED /* Assets.xcassets */; };
 		271C6DB5208A5BD4009F79ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271C6DB3208A5BD4009F79ED /* LaunchScreen.storyboard */; };
 		271C6DB8208A5BD4009F79ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 271C6DB7208A5BD4009F79ED /* main.m */; };
+		271C6DC8208A636D009F79ED /* PaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 271C6DC7208A636D009F79ED /* PaintView.m */; };
+		271C6DCB208A6376009F79ED /* SelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 271C6DCA208A6376009F79ED /* SelectView.m */; };
+		271C6DD1208A63E9009F79ED /* LineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 271C6DD0208A63E9009F79ED /* LineSegment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		271C6DB4208A5BD4009F79ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		271C6DB6208A5BD4009F79ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		271C6DB7208A5BD4009F79ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		271C6DC6208A636D009F79ED /* PaintView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaintView.h; sourceTree = "<group>"; };
+		271C6DC7208A636D009F79ED /* PaintView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaintView.m; sourceTree = "<group>"; };
+		271C6DC9208A6376009F79ED /* SelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectView.h; sourceTree = "<group>"; };
+		271C6DCA208A6376009F79ED /* SelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectView.m; sourceTree = "<group>"; };
+		271C6DCF208A63E9009F79ED /* LineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineSegment.h; sourceTree = "<group>"; };
+		271C6DD0208A63E9009F79ED /* LineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineSegment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +68,16 @@
 			isa = PBXGroup;
 			children = (
 				271C6DA8208A5BD4009F79ED /* AppDelegate.h */,
+				271C6DAE208A5BD4009F79ED /* Main.storyboard */,
 				271C6DA9208A5BD4009F79ED /* AppDelegate.m */,
 				271C6DAB208A5BD4009F79ED /* ViewController.h */,
 				271C6DAC208A5BD4009F79ED /* ViewController.m */,
-				271C6DAE208A5BD4009F79ED /* Main.storyboard */,
+				271C6DC6208A636D009F79ED /* PaintView.h */,
+				271C6DC7208A636D009F79ED /* PaintView.m */,
+				271C6DC9208A6376009F79ED /* SelectView.h */,
+				271C6DCA208A6376009F79ED /* SelectView.m */,
+				271C6DCF208A63E9009F79ED /* LineSegment.h */,
+				271C6DD0208A63E9009F79ED /* LineSegment.m */,
 				271C6DB1208A5BD4009F79ED /* Assets.xcassets */,
 				271C6DB3208A5BD4009F79ED /* LaunchScreen.storyboard */,
 				271C6DB6208A5BD4009F79ED /* Info.plist */,
@@ -142,7 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271C6DCB208A6376009F79ED /* SelectView.m in Sources */,
+				271C6DD1208A63E9009F79ED /* LineSegment.m in Sources */,
 				271C6DAD208A5BD4009F79ED /* ViewController.m in Sources */,
+				271C6DC8208A636D009F79ED /* PaintView.m in Sources */,
 				271C6DB8208A5BD4009F79ED /* main.m in Sources */,
 				271C6DAA208A5BD4009F79ED /* AppDelegate.m in Sources */,
 			);
