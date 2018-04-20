@@ -24,4 +24,14 @@
     return self;
 }
 
+-(instancetype)initWithColor:(UIColor*)color
+{
+    self = [super init];
+    if (self) {
+        NSMutableArray<LineSegment*>* line = [[NSMutableArray alloc] init];
+        _line = line;
+        _color = color;
+    }
+    return self;
+}
 @end

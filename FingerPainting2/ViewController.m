@@ -12,7 +12,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet PaintView *PaintView;
-
+@property (nonatomic, strong) UIColor* color;
 
 
 @end
@@ -21,7 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.PaintView.color = [UIColor redColor];
+// Do any additional setup after loading the view, typically from a nib.
 }
 
 
@@ -32,6 +33,9 @@
 
 - (IBAction)colorChanged:(UIButton *)sender {
     
-}
+    self.PaintView.color = sender.currentTitleColor;
+    
+    }
+
 
 @end

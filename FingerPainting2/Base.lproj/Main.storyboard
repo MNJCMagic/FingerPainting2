@@ -30,7 +30,7 @@
                                     <color key="titleColor" red="1" green="0.88088855499999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="colorChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4qT-jE-yXj"/>
+                                    <action selector="colorChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JJ6-A3-BQd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yz-AS-C0H">
@@ -40,7 +40,7 @@
                                     <color key="titleColor" red="0.32604181310844216" green="0.72676489637305697" blue="0.30189584439530948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="colorChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQU-GP-dHi"/>
+                                    <action selector="colorChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o7K-ug-Cte"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Em0-Yn-Q5c">
@@ -50,7 +50,8 @@
                                     <color key="titleColor" red="0.0" green="0.25" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="colorChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1C0-DA-dRy"/>
+                                    <action selector="colorChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z1m-BT-BWq"/>
+                                    <action selector="colorChanged:" destination="rvA-vK-NXB" eventType="touchUpInside" id="orm-9Z-krL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,6 +63,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="rvA-vK-NXB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>

@@ -11,10 +11,8 @@
 
 
 @interface PaintView()
-//@property (nonatomic, strong) NSMutableArray<LineSegment*>* line;
-//@property (nonatomic, strong) NSMutableArray<LineSegment*>* passingLine;
-@property (nonatomic, strong) NSMutableArray<NSMutableArray*>* lines;
-@property (nonatomic, strong) UIColor* color;
+@property (nonatomic, strong) NSMutableArray<Line*>* lines;
+
 @end
 
 
@@ -22,7 +20,8 @@
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        _line = [NSMutableArray new];
+        _lines = [NSMutableArray new];
+
     }
     return self;
 }
@@ -31,11 +30,13 @@
     UITouch *touch = touches.anyObject;
     CGPoint first = [touch previousLocationInView:self];
     LineSegment *seg = [[LineSegment alloc] initWithFirstPoint:first andSecondPoint:first];
-    [self.line addObject:seg];
-    Line *newLine = [Line new];
-    newLine.color = self.color;
-    [self.lines addObject:<#(nonnull NSMutableArray *)#>]
+    UIColor *curColor = self.color;
+    Line *newLine = [[Line alloc] initWithColor:curColor];
+
     [newLine.line addObject:seg];
+
+    [self.lines addObject:newLine];
+
     NSLog(@"began");
     [self setNeedsDisplay];
 }
@@ -45,7 +46,7 @@
     CGPoint first = [touch previousLocationInView:self];
     CGPoint second = [touch locationInView:self];
     LineSegment *seg = [[LineSegment alloc] initWithFirstPoint:first andSecondPoint:second];
-    [self.line addObject:seg];
+    [self.lines.lastObject.line addObject:seg];
     
     NSLog(@"continuing");
     [self setNeedsDisplay];
@@ -53,30 +54,40 @@
 
 -(void)drawRect:(CGRect)rect {
     NSLog(@"drawing");
+        for (Line *line in self.lines) {
     UIBezierPath *path = [UIBezierPath bezierPath];
     path.lineWidth = 4.0;
     path.lineCapStyle = kCGLineCapRound;
-    UIColor *red = [UIColor redColor];
-    [red setStroke];
-    for (LineSegment *seg in self.line) {
-        if (CGPointEqualToPoint(seg.firstPoint, seg.secondPoint)) {
-            [path moveToPoint:seg.firstPoint];
-            continue;
-        }
-        [path addLineToPoint:seg.firstPoint];
-        [path addLineToPoint:seg.secondPoint];
+    [line.color setStroke];
+
+        
+        for (LineSegment *seg in line.line) {
+
+            if (CGPointEqualToPoint(seg.firstPoint, seg.secondPoint)) {
+                [path moveToPoint:seg.firstPoint];
+                continue;
+            }
+            [path addLineToPoint:seg.firstPoint];
+            [path addLineToPoint:seg.secondPoint];
+
     }
+//    UIColor *red = [UIColor redColor];
+//    [red setStroke];
+//    for (LineSegment *seg in self.line) {
+//        if (CGPointEqualToPoint(seg.firstPoint, seg.secondPoint)) {
+//            [path moveToPoint:seg.firstPoint];
+//            continue;
+//        }
+//        [path addLineToPoint:seg.firstPoint];
+//        [path addLineToPoint:seg.secondPoint];
+//    }
     [path stroke];
 }
 
-
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
 }
-*/
+
+
+
+
 
 @end

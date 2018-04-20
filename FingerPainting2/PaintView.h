@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PaintView : UIView
-
+@property (nonatomic, strong) UIColor* color;
 @end

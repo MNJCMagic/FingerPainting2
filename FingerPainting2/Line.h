@@ -15,4 +15,5 @@
 @property (nonatomic, strong) NSMutableArray<LineSegment*>* line;
 @property (nonatomic, strong) UIColor* color;
 
+-(instancetype)initWithColor:(UIColor*)color;
 @end
